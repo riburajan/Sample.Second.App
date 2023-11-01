@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	
+	<application android:allowBackup="true" 
+				 android:icon="@mipmap/appicon" 
+				 android:roundIcon="@mipmap/appicon_round" 
+				 android:supportsRtl="true">
+
+
+		<activity android:name="com.companyname.applauncher.maui" android:exported="true">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+
+				<!--Accepts URIs that begin with "myapp://com.companyname.applauncher.maui/expeed” -->
+				<data android:scheme="myapp"
+					  android:host="com.companyname.applauncher.maui"
+					  android:pathPrefix="/expeed" />
+				<!--note that the leading "/" is required for pathPrefix-->
+
+			</intent-filter>
+		</activity>
+		
+	</application>	
+	
+	<queries>
+					
+		<!--package name for other app to open-->
+		<package android:name="com.companyname.sample.second.app" />
+
+	</queries>
+	
+</manifest>

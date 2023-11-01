@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppLauncher.Maui.MainPage"
+             Title="Launch Another App"
+             BackgroundColor="GhostWhite"
+             >
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="50"
+                HorizontalOptions="Center" />
+
+            <!--<Label
+                Text="Open Another App....!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="25"
+                TextColor="IndianRed"
+                HorizontalOptions="FillAndExpand" />
+
+            <Label
+                Text="Package Name :"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="12"
+                TextColor="DeepSkyBlue"
+                FontAttributes="Bold"
+                HorizontalOptions="FillAndExpand" />-->
+
+            <Entry x:Name="txtPackagename" 
+                   TextColor="DarkSlateBlue" 
+                   Text="com.companyname.sample.second.app" 
+                   FontAttributes="Bold">
+                
+            </Entry>
+
+            <Button
+                x:Name="btnClick1"
+                Text="App1"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="Button1_ClickAsync"
+                FontAttributes="Bold"
+                FontSize="20"
+                HorizontalOptions="Center" />
+
+            <Button
+              x:Name="btnClick2"
+              Text="App2"
+              SemanticProperties.Hint="Counts the number of times you click"
+              Clicked="Button2_ClickAsync"
+              FontAttributes="Bold"
+              FontSize="20"
+              HorizontalOptions="Center" />     
+
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
